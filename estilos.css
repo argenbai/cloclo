@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slider ul {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+.slider li {
+    flex: 0 0 100%;
+    list-style: none;
+    height: 100%;
+}
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .slider, .slider ul, .slider img {
+        height: 100vh;
+        object-fit: cover;
+    }
+}
